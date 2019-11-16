@@ -1,1 +1,31 @@
-{"lb":{"cost":"40","tasks":["Define which hosts to use for Load Balancer","Create Load Balancer","test configuration works OK by taking some sites down"]},"vm":{"cost":"100","tasks":["Provision a Virtual Machine"]},"webapp":{"cost":"0","tasks":["Create AzureWebsites App and deploy app to the web"]}}
+{
+   "lb":{
+      "cost":"40",
+      "tasks":[
+         "Define which hosts to use for Load Balancer",
+         "Create Load Balancer",
+         "test configuration works OK by taking some sites down"
+      ]
+   },
+   "vm":{
+      "cost":"100",
+      "tasks":[
+         "Provision a Virtual Machine"
+      ]
+   },
+   "webapp":{
+      "cost":"0",
+      "tasks":[
+         "Create AzureWebsites App and deploy app to the web"
+      ]
+   },
+   "db":{
+      "cost":"10",
+      "tasks":[
+         "Write SQL Scripts",
+         "Load Dump from SQL onto server",
+         "Verify the Script loaded correctly",
+         "Connect SQL SERVER Management Studio to Azure Instance"
+      ]
+   }
+}
