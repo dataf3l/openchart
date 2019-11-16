@@ -1,0 +1,1 @@
+{"lb":{"cost":"40","tasks":["Define which hosts to use for Load Balancer","Create Load Balancer","test configuration works OK by taking some sites down"]},"vm":{"cost":"100","tasks":["Provision a Virtual Machine"]},"webapp":{"cost":"0","tasks":["Create AzureWebsites App and deploy app to the web"]}}
