@@ -2,8 +2,11 @@
 
 var globalNetworkName="sample";
 var globalNetwork = {"nodes":[],"edges":[]};
+var globalPaletteTool="vm";
 
-
+function setTool(tool){
+	globalPaletteTool = tool;
+}
 
 // points: [{x:10,y:10},{x:10,y:10},{x:10,y:10}]
 // output: 
@@ -48,11 +51,18 @@ function getNetworkName(){
 function getNetwork(){
 	return globalNetwork;
 }
+
+
+
 function getMenuOptions(){   
 	return ("<div class=palette>"+
 		"<a class='palette-item' href='#' onclick='loadFromAPI(prompt(\"Network Name:\"))' >  &#128194 Load</a>&nbsp;"+
 		"<a class='palette-item' href='#' onclick='SaveToAPI(prompt(\"Network Name:\"))' > &#128190; Save</a>&nbsp;"+
 		"<a class='palette-item' href='#' onclick='doRender()' >&#9655; Render</a>&nbsp;"+
+		"<a class='palette-item' href='#' onclick='setTool(\"vm\")' > VM</a>&nbsp;"+//&#55357;
+		"<a class='palette-item' href='#' onclick='setTool(\"lb\")' > LB</a>&nbsp;"+//&#55356;
+		"<a class='palette-item' href='#' onclick='setTool(\"storage\")' > Storage</a>&nbsp;"+//boxbox//&#128189;
+		"<a class='palette-item' href='#' onclick='setTool(\"db\")' > DB</a>&nbsp;"+//&#9921;
 		"</div>")
 }
 function showButtonPalette(){

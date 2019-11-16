@@ -100,10 +100,10 @@ function mouseMoved(e){
 			var w = (maxx - minx);
 			var h = (maxy - miny);
 			//setTimeout(function(){
-			var name = prompt("Enter VM Name:","");
+			var name = prompt("Enter "+globalPaletteTool+" Name:","");
 			if(name!=null){
 				
-				addNodeToNetwork(minx,miny,w,h,"lb",name);
+				addNodeToNetwork(minx,miny,w,h,globalPaletteTool,name);
 				redrawAll();
 			}
 			//}},50);

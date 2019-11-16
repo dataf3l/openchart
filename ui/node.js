@@ -15,7 +15,6 @@ function updateNodePosition(id,target){
 
 
 function addNodeToNetwork(x,y,w,h,type,name){
-	type="lb";
 	var net = {"x":x,"y":y,"width":w,"height":h,"type":type,"name":name};
 	globalNetwork.nodes.push(net);
 }
