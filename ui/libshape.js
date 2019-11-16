@@ -39,11 +39,7 @@ function saveToAPI(networkName, net){
 	// Save
 	localStorage.setItem(networkName, JSON.Stringify(net));
 }
-//Do Render 
-function doRender(networkName, net){
-	// TODO: Include neeraj's code
-	alert("Rendering:" + networkName+"::" + JSON.Stringify(net));
-}
+
 function getNetworkName(){
 	return globalNetworkName;
 }
@@ -53,9 +49,8 @@ function getNetwork(){
 function getMenuOptions(){
 	return ("<div class=palette>"+
 		"<a class='palette-item' href='#' onclick='loadFromAPI(prompt(\"Network Name:\"))' > Load</a>&nbsp;"+
-		"<a class='palette-item' href='#' onclick='loadFromAPI(prompt(\"Network Name:\"))' > Save</a>&nbsp;"+
-		"<a class='palette-item' href='#' onclick='SaveToAPI(prompt(\"Network Name:\"))' > Render</a>&nbsp;"+
-		"<a class='palette-item' href='#' onclick='doRender(getNetworkName(),getNetwork())' > Load</a>&nbsp;"+
+		"<a class='palette-item' href='#' onclick='SaveToAPI(prompt(\"Network Name:\"))' > Save</a>&nbsp;"+
+		"<a class='palette-item' href='#' onclick='doRender()' > Render</a>&nbsp;"+
 		"</div>")
 }
 function showButtonPalette(){
