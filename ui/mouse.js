@@ -93,7 +93,7 @@ function mouseMoved(e){
 			var name = prompt("Enter VM Name:","");
 			if(name!=null){
 				
-				addNodeToNetwork(minx,miny,w,h,"vm",name);
+				addNodeToNetwork(minx,miny,w,h,"lb",name);
 				redrawAll();
 			}},50);
 

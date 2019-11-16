@@ -58,3 +58,21 @@ body {
 	height:2500;
 
 }
+.property-editor label {
+	display:inline-block;
+	width:40%;
+}
+.property-editor input {
+	display:inline-block;
+	width:50%;
+}
+.property-editor {
+	width:200px;
+	height:300px;
+	padding:10px;
+	border: 1px solid black;
+	background-color:rgb(230,230,230);
+	
+
+
+}

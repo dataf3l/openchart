@@ -1,33 +1,35 @@
 // Renderer code here
 
+   
 var globalCost =  {
    "lb":{
-      "cost":"40",
+      "cost":"100",
       "tasks":[
-	      {"name":"Define which hosts to use for Load Balancer","cost":"20"},
-	      {"name":"Create Load Balancer","cost":"10"},
-	      {"name":"test configuration works OK by taking some sites down","cost":"10"}
+	      {"name":"//Create an IP Address\n  az network public-ip create --resource-group MyResourceGroup --name [#name]IP","cost":"10"},
+	      {"name":"//Create Load Balancer\n  az network lb create     --resource-group myResourceGroupLB     --name [#name]     --public-ip-address [#name]IP     --frontend-ip-name myFrontEndPool     --backend-pool-name myBackEndPool","cost":"10"},
+	      {"name":"//Create the health probe \naz network lb probe create --resource-group myResourceGroupLB      --lb-name [#name] --name [#name]HealthProbe      --protocol tcp      --port 80","cost":"10"},
+	      {"name":"//Create the load balancer rule \naz network lb rule create --resource-group MyResourceGroup --lb-name [#name] --name [#name]HTTPRule --protocol tcp --frontend-port 80 --backend-port 80 --frontend-ip-name myFrontEndPool --backend-pool-name myBackEndPool --probe-name [#name]HealthProbe","cost":"10"}
       ]
    },
    "vm":{
-      "cost":"100",
+      "cost":"152",
       "tasks":[
-	      {"name":"Provision a Virtual Machine","cost":"100"}
+	      {"name":"//Provision a Virtual Machine\n// https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#az-vm-create \naz vm create -n [#name] -g MyResourceGroup --image UbuntuLTS","cost":"100"}
       ]
    },
-   "webapp":{
-      "cost":"250",
+   "storage":{
+      "cost":"21",
       "tasks":[
-	      {"name":"Create AzureWebsites App and deploy app to the web","cost":"250"}
+	      {"name":"//Create Storage thing","cost":"21"}
       ]
    },
    "db":{
-      "cost":"300",
+      "cost":"1472",
       "tasks":[
-         {"name":"Write SQL Scripts","cost":"100"},
-         {"name":"Load Dump from SQL onto server","cost":"50"},
-         {"name":"Verify the Script loaded correctly","cost":"50"},
-         {"name":"Connect SQL SERVER Management Studio to Azure Instance","cost":"100"}
+         {"name":"//Write SQL Scripts","cost":"100"},
+         {"name":"//Load Dump from SQL onto server","cost":"50"},
+         {"name":"//Verify the Script loaded correctly","cost":"50"},
+         {"name":"//Connect SQL SERVER Management Studio to Azure Instance","cost":"100"}
       ]
    }
 };
@@ -49,7 +51,7 @@ function doRender(){
 		totalCost = totalCost + parseInt(globalCost[type].cost,10);
 		for(var t=0;t<globalCost[type].tasks.length;t++){
 			var task = globalCost[type].tasks[t];
-			tasks.push(task.name);
+			tasks.push("\n"+task.name.replace("[#name]",node.name));
 		}
 
 	}
