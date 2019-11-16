@@ -27,6 +27,7 @@ function loadFromAPI(networkName){
 		return {};
 	}
 	var net = localStorage.getItem(networkName) ? JSON.parse(localStorage.getItem(networkName)) : {"nodes":[],"edges":[]};
+	redrawAll();
 	return net;
 }
 
@@ -38,6 +39,7 @@ function saveToAPI(networkName, net){
 	}
 	// Save
 	localStorage.setItem(networkName, JSON.Stringify(net));
+	redrawAll();
 }
 
 function getNetworkName(){
