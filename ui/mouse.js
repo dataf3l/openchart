@@ -4,9 +4,29 @@
 
 
 var globalDrawing = 0;
+var globalConnecting = 0;
 var coords = [];
 function mouseMoved(e){
-	//console.log(e);
+	// CONNECT MODE:
+	if(e.altKey == true){
+		if(globalConnecting == 0){
+			coords.push([e.clientX,e.clientY]);
+			globalConnecting = 1;
+		}
+	}else{
+		if(globalConnecting == 1){
+			// Drawing is over
+			//console.log(coords);
+			var from = 0;
+			var to = 1;
+			addEdgeToNetwork(from,to);
+			coords = [];
+			globalConnecting = 0;
+
+		}
+	}
+
+	// CREATE MODE:
 	if(e.shiftKey == true){
 		coords.push([e.clientX,e.clientY]);
 		if(globalDrawing == 0){

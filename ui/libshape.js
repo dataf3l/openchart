@@ -1,5 +1,9 @@
 /** The purpose of ths file is to match shapes to drawings */
 
+var globalNetworkName="sample";
+var globalNetwork = {"nodes":[],"edges":[]};
+
+
 
 // points: [{x:10,y:10},{x:10,y:10},{x:10,y:10}]
 // output: 
@@ -22,7 +26,7 @@ function loadFromAPI(networkName){
 		alert("Unsupported browser");
 		return {};
 	}
-	var net = localStorage.getItem(networkName) ? JSON.parse(localStorage.getItem(networkName)) : {"nodes":[]};
+	var net = localStorage.getItem(networkName) ? JSON.parse(localStorage.getItem(networkName)) : {"nodes":[],"edges":[]};
 	return net;
 }
 
@@ -40,11 +44,9 @@ function doRender(networkName, net){
 	// TODO: Include neeraj's code
 	alert("Rendering:" + networkName+"::" + JSON.Stringify(net));
 }
-var globalNetworkName="sample";
 function getNetworkName(){
 	return globalNetworkName;
 }
-var globalNetwork= {"nodes":[]};
 function getNetwork(){
 	return globalNetwork;
 }

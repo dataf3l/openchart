@@ -3,16 +3,20 @@
 	<head>
 		<title>Azure </title>
 		<script src="libshape.js"></script>
+		<script src="line.js"></script>
 		<script src="init.js"></script>
 		<script src="mouse.js"></script>
 		<script src="property_editor.js"></script>
 		<script src="node.js"></script>
+		<script src="edge.js"></script>
 		<script src="render_nodes.js"></script>
+		<script src="render_edges.js"></script>
 		<link href="style.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body id=body onload="init()" onmousemove="mouseMoved(event)" >
-		<div id="toolbar"></div>
+		<canvas id="edges" width=2500 height=2500 ></canvas>
 		<div id="mainDrawingArea"  ></div>
 		<div id="propertyEditor" ></div>
+		<div id="toolbar"></div>
 	</body>
 </html>

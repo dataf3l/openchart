@@ -6,7 +6,10 @@ body {
 	border:1px solid black;
 	padding:10px;
 	background-color:rgb(0,112,201);/* Azure blue*/
-
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
 }
 .palette-item {
 	display:inline-block;
@@ -29,6 +32,7 @@ body {
 	width:100%;
 	height:1600px;
 	border:1px solid red;
+	background-color:transparent;
 }
 .node {
 
@@ -43,5 +47,13 @@ body {
 	font-size:16pt;
 	padding:5px;
 	box-sizing:border-box;
+
+}
+#canvas {
+	position:absolute;
+	left:0;
+	top:0;
+	width:2500;
+	height:2500;
 
 }
