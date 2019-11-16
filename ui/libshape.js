@@ -59,10 +59,10 @@ function getMenuOptions(){
 		"<a class='palette-item' href='#' onclick='loadFromAPI(prompt(\"Network Name:\"))' >  &#128194 Load</a>&nbsp;"+
 		"<a class='palette-item' href='#' onclick='SaveToAPI(prompt(\"Network Name:\"))' > &#128190; Save</a>&nbsp;"+
 		"<a class='palette-item' href='#' onclick='doRender()' >&#9655; Render</a>&nbsp;"+
-		"<a class='palette-item' href='#' onclick='setTool(\"vm\")' > VM</a>&nbsp;"+//&#55357;
-		"<a class='palette-item' href='#' onclick='setTool(\"lb\")' > LB</a>&nbsp;"+//&#55356;
-		"<a class='palette-item' href='#' onclick='setTool(\"storage\")' > Storage</a>&nbsp;"+//boxbox//&#128189;
-		"<a class='palette-item' href='#' onclick='setTool(\"db\")' > DB</a>&nbsp;"+//&#9921;
+		"<a class='palette-item node-vm'      href='#' onclick='setTool(\"vm\")' > VM</a>&nbsp;"+//&#55357;
+		"<a class='palette-item node-lb'      href='#' onclick='setTool(\"lb\")' > LB</a>&nbsp;"+//&#55356;
+		"<a class='palette-item node-storage' href='#' onclick='setTool(\"storage\")' > Storage</a>&nbsp;"+//boxbox//&#128189;
+		"<a class='palette-item node-db'      href='#' onclick='setTool(\"db\")' > DB</a>&nbsp;"+//&#9921;
 		"</div>")
 }
 function showButtonPalette(){

@@ -53,6 +53,24 @@ body {
 	box-sizing:border-box;
 
 }
+.node-lb {
+	background: rgb(68,60,255);
+	background: linear-gradient(180deg, rgba(68,60,255,1) 0%, rgba(141,140,255,1) 100%);
+}
+.node-vm {
+	background: rgb(68,60,255);
+	background: linear-gradient(180deg, rgba(255,60,255,1) 0%, rgba(255,140,255,1) 100%);
+}
+.node-db {
+	background: rgb(68,60,255);
+	background: linear-gradient(180deg, rgba(255,60,60,1) 0%, rgba(255,140,140,1) 100%);
+}
+.node-storage {
+	background: rgb(68,60,255);
+	background: linear-gradient(180deg, rgba(68,255,60,1) 0%, rgba(141,255,140,1) 100%);
+}
+
+
 #canvas {
 	position:absolute;
 	left:0;
