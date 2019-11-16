@@ -6,20 +6,53 @@
 var globalDrawing = 0;
 var globalConnecting = 0;
 var coords = [];
+
+function inside(x,y,node){
+	var minx = node.x;
+	var miny = node.y;
+	var maxx = node.x + node.width;
+	var maxy = node.y + node.height;
+
+	if(x >= minx && x <= maxx && y >= miny && y <= maxy){
+		return true;
+	}
+	return false;
+}
+
 function mouseMoved(e){
 	// CONNECT MODE:
 	if(e.altKey == true){
+		coords.push([e.clientX,e.clientY]);// todo make more efficient
 		if(globalConnecting == 0){
-			coords.push([e.clientX,e.clientY]);
 			globalConnecting = 1;
 		}
 	}else{
 		if(globalConnecting == 1){
 			// Drawing is over
-			//console.log(coords);
-			var from = 0;
-			var to = 1;
-			addEdgeToNetwork(from,to);
+			console.log(coords);
+			var from = -1;
+			var to = -1;
+			for(var x=0;x<globalNetwork.nodes.length;x++){
+				var node = globalNetwork.nodes[x];
+				if(inside(coords[0][0],coords[0][1],node)){
+					from = x;
+					break;
+				}
+			}
+			
+			for(var x=0;x<globalNetwork.nodes.length;x++){
+				var node = globalNetwork.nodes[x];
+				if(inside(coords[coords.length-1][0],coords[coords.length-1][1],node)){				
+					to = x;
+					break;
+				}
+			}
+			if(from==to){
+				console.log("same, ignoring");
+			}
+			if(from>-1 && to>-1 && (from != to)){
+				addEdgeToNetwork(from,to);
+			}
 			coords = [];
 			globalConnecting = 0;
 

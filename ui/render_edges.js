@@ -8,10 +8,12 @@ function renderEdges(){
         var ctx = canvas.getContext("2d");
 
 	for(var i=0;i<globalNetwork.edges.length;i++){
-		var edge = globalNetwork.edges[0];
+		var edge = globalNetwork.edges[i];
 		var from = globalNetwork.nodes[edge.from];
 		var to = globalNetwork.nodes[edge.to];
-
+		if(edge.from == edge.to){
+			console.log("How did this happen?")
+		}
 		var fx = from.x + from.width/2;
 		var fy = from.y + from.height/2;
 
