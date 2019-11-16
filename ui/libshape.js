@@ -48,11 +48,11 @@ function getNetworkName(){
 function getNetwork(){
 	return globalNetwork;
 }
-function getMenuOptions(){
+function getMenuOptions(){   
 	return ("<div class=palette>"+
-		"<a class='palette-item' href='#' onclick='loadFromAPI(prompt(\"Network Name:\"))' > Load</a>&nbsp;"+
-		"<a class='palette-item' href='#' onclick='SaveToAPI(prompt(\"Network Name:\"))' > Save</a>&nbsp;"+
-		"<a class='palette-item' href='#' onclick='doRender()' > Render</a>&nbsp;"+
+		"<a class='palette-item' href='#' onclick='loadFromAPI(prompt(\"Network Name:\"))' >  &#128194 Load</a>&nbsp;"+
+		"<a class='palette-item' href='#' onclick='SaveToAPI(prompt(\"Network Name:\"))' > &#128190; Save</a>&nbsp;"+
+		"<a class='palette-item' href='#' onclick='doRender()' >&#9655; Render</a>&nbsp;"+
 		"</div>")
 }
 function showButtonPalette(){
