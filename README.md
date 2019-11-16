@@ -22,6 +22,10 @@ Find this on the cloud here:
 ## DEMO:
 http://openchart.azurewebsites.net/ui/shape.html
 
+## See it in action:
+
+https://www.youtube.com/watch?v=D0VmsjMyFnU&feature=youtu.be
+
 
 See demo video of usage here:
 
