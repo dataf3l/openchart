@@ -23,7 +23,7 @@ function showPropertyEditor(targetDivId, nodeId) {
 		if(p == 'id'||p=='type'){// can't change type.
 			continue;
 		}
-		dx += "<label class=\"property-label\">"+ucwords(p)+":   </label> <input onblur='propertyChanged("+nodeId+",\""+p+"\",this.value)' type='text' value=' " + (""+value).replace("'","") +" '> <br/>\n";
+		dx += "<label class=\"property-label\">"+ucwords(p)+":   </label> <input onblur='propertyChanged("+nodeId+",\""+p+"\",this.value)' type='text' value='" + (""+value).replace("'","") +"'> <br/>\n";
 	}
 	dx += "</div>";
 	document.getElementById(targetDivId).innerHTML = dx;
