@@ -8,15 +8,20 @@ function propertyChanged(nodeId,propertyName,newValue){
 // if node has no properties, add an empty array.
 // for each property, show a text box
 // when the textboxcontent changes, call: propertyChanged()
+//type is not editable 
+//id is not editable
+//onblur call propertyChanged
+
 function showPropertyEditor(targetDivId, nodeId, node) {
 	return (
-		"<div><label>Name:   </label> <input type='text' value=' " + node.type +" '> <br>"+
-		      <label>x:      </label> <input type='text' value=' " + node.x +" '> <br>"+
-		      <label>y:      </label> <input type='text' value=' " + node.y + " '> <br>"+
-		      <label>width:  </label> <input type='text' value=' " + node.width + " '> <br>"+ 
-		      <label>height: </label> <input type='text' value=' " + node.height + " '> <br>"+ 
-		      <label>name:   </label> <input type='text' value=' " + node.name + " '> <br>"+ 
-		      <label>id:     </label> <input type='text' value=' " + node.id + " '> <br>"+ 
+		"<div>
+		<label>Name:   </label> <input onblur='propertyChanged("+nodeId+",\"type\",this.value)' type='text' value=' " + node.type +" '> <br>"+
+		<label>x:      </label> <input onblur='propertyChanged("+nodeId+",\"x\",this.value)' type='text' value=' " + node.x +" '> <br>"+
+		<label>y:      </label> <input onblur='propertyChanged("+nodeId+",\"y\",this.value)' type='text' value=' " + node.y + " '> <br>"+
+		<label>width:  </label> <input onblur='propertyChanged("+nodeId+",\"width\",this.value)' type='text' value=' " + node.width + " '> <br>"+ 
+		<label>height: </label> <input onblur='propertyChanged("+nodeId+",\"height\",this.value)' type='text' value=' " + node.height + " '> <br>"+
+		<label>name:   </label> <input onblur='propertyChanged("+nodeId+",\"name\",this.value)' type='text' value=' " + node.name + " '> <br>"+ 
+		<label>id:     </label> <input onblur='propertyChanged("+nodeId+",\"id\",this.value)' type='text' value=' " + node.id + " '> <br>"+
 		</div>"
 		)
 }
