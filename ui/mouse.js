@@ -52,6 +52,7 @@ function mouseMoved(e){
 			}
 			if(from>-1 && to>-1 && (from != to)){
 				addEdgeToNetwork(from,to);
+				redrawAll();
 			}
 			coords = [];
 			globalConnecting = 0;
@@ -88,8 +89,13 @@ function mouseMoved(e){
 
 			var w = (maxx - minx);
 			var h = (maxy - miny);
-
-			addNodeToNetwork(minx,miny,w,h,"vm");
+			setTimeout(function(){
+			var name = prompt("Enter VM Name:","");
+			if(name!=null){
+				
+				addNodeToNetwork(minx,miny,w,h,"vm",name);
+				redrawAll();
+			}},50);
 
 			globalDrawing = 0;
 			coords = [];
