@@ -69,7 +69,10 @@ body {
 	background: rgb(68,60,255);
 	background: linear-gradient(180deg, rgba(68,255,60,1) 0%, rgba(141,255,140,1) 100%);
 }
-
+.node-rg {
+	background: rgb(68,60,255);
+	background: linear-gradient(180deg, rgba(255,60,255,1) 0%, rgba(255,140,255,1) 100%);
+}
 
 #canvas {
 	position:absolute;

@@ -63,6 +63,7 @@ function getMenuOptions(){
 		"<a class='palette-item node-lb'      href='#' onclick='setTool(\"lb\")' > LB</a>&nbsp;"+//&#55356;
 		"<a class='palette-item node-storage' href='#' onclick='setTool(\"storage\")' > Storage</a>&nbsp;"+//boxbox//&#128189;
 		"<a class='palette-item node-db'      href='#' onclick='setTool(\"db\")' > DB</a>&nbsp;"+//&#9921;
+		"<a class='palette-item node-vm'      href='#' onclick='setTool(\"rg\")' > RG</a>&nbsp;"+//&#9921;
 		"</div>")
 }
 function showButtonPalette(){

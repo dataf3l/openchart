@@ -31,7 +31,14 @@ var globalCost =  {
          {"name":"//Verify the Script loaded correctly","cost":"50"},
          {"name":"//Connect SQL SERVER Management Studio to Azure Instance","cost":"100"}
       ]
+   },
+   "rg":{
+      "cost":"0",
+      "tasks":[
+         {"name":"//Create Resource Group \naz network public-ip create --resource-group #name","cost":"0"}
+      ]
    }
+	
 };
 
 
