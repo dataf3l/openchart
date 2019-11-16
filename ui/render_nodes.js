@@ -25,6 +25,14 @@ function draw_rect(ctx,px1,py1,width,height){
 	ctx.strokeRect(px1, py1,width,height);
 
 }
+function draw_rect2(ctx,px1,py1,width,height,color){
+	ctx.fillStyle = color;
+	ctx.clearRect(px1, py1,width,height);
+	ctx.strokeStyle = color;
+	ctx.setLineDash([10, 3]);
+	ctx.strokeRect(px1, py1,width,height);
+
+}
 function renderNodeShadowBoxes(){
         var canvas = document.getElementById('edges');
         var ctx = canvas.getContext("2d");

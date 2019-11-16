@@ -58,6 +58,14 @@ body {
 	height:2500;
 
 }
+#preview {
+	position:absolute;
+	left:0;
+	top:0;
+	width:2500;
+	height:2500;
+
+}
 .property-editor label {
 	display:inline-block;
 	width:40%;

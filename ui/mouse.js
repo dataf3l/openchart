@@ -20,9 +20,15 @@ function inside(x,y,node){
 }
 
 function mouseMoved(e){
+	var canvas = document.getElementById('preview');
+        var ctx = canvas.getContext("2d");
+	//ctx.clearRect(0, 0, canvas.width, canvas.height);
+
 	// CONNECT MODE:
 	if(e.altKey == true){
+		draw_rect2(ctx,e.clientX-1,e.clientY-1,3,3,'magenta');
 		coords.push([e.clientX,e.clientY]);// todo make more efficient
+
 		if(globalConnecting == 0){
 			globalConnecting = 1;
 		}
@@ -53,15 +59,19 @@ function mouseMoved(e){
 			if(from>-1 && to>-1 && (from != to)){
 				addEdgeToNetwork(from,to);
 				redrawAll();
+
 			}
 			coords = [];
 			globalConnecting = 0;
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 		}
 	}
 
 	// CREATE MODE:
 	if(e.shiftKey == true){
+		draw_rect2(ctx,e.clientX-1,e.clientY-1,3,3,'blue');
+
 		coords.push([e.clientX,e.clientY]);
 		if(globalDrawing == 0){
 			globalDrawing = 1;
@@ -89,16 +99,18 @@ function mouseMoved(e){
 
 			var w = (maxx - minx);
 			var h = (maxy - miny);
-			setTimeout(function(){
+			//setTimeout(function(){
 			var name = prompt("Enter VM Name:","");
 			if(name!=null){
 				
 				addNodeToNetwork(minx,miny,w,h,"lb",name);
 				redrawAll();
-			}},50);
+			}
+			//}},50);
 
 			globalDrawing = 0;
 			coords = [];
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
 		}
 	}
 }
