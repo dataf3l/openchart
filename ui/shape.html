@@ -1,13 +1,18 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Azure </title>
 		<script src="libshape.js"></script>
 		<script src="init.js"></script>
+		<script src="mouse.js"></script>
+		<script src="property_editor.js"></script>
+		<script src="node.js"></script>
+		<script src="render_nodes.js"></script>
 		<link href="style.css" type="text/css" rel="stylesheet" />
 	</head>
-	<body onload="init()">
+	<body id=body onload="init()" onmousemove="mouseMoved(event)" >
 		<div id="toolbar"></div>
-		<div id="mainDrawingArea"></div>
-		<div id="propertyEditor"></div>
+		<div id="mainDrawingArea"  ></div>
+		<div id="propertyEditor" ></div>
 	</body>
 </html>

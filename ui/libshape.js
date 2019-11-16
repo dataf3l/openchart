@@ -22,7 +22,7 @@ function loadFromAPI(networkName){
 		alert("Unsupported browser");
 		return {};
 	}
-	var net = localStorage.getItem(networkName) ? JSON.parse(localStorage.getItem(networkName)) : {};
+	var net = localStorage.getItem(networkName) ? JSON.parse(localStorage.getItem(networkName)) : {"nodes":[]};
 	return net;
 }
 
@@ -44,7 +44,7 @@ var globalNetworkName="sample";
 function getNetworkName(){
 	return globalNetworkName;
 }
-var globalNetwork;
+var globalNetwork= {"nodes":[]};
 function getNetwork(){
 	return globalNetwork;
 }
