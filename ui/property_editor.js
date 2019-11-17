@@ -29,3 +29,8 @@ function showPropertyEditor(targetDivId, nodeId) {
 	document.getElementById(targetDivId).innerHTML = dx;
 
 }
+
+
+
+
+
