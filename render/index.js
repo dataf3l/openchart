@@ -1,6 +1,5 @@
 // Renderer code here
 
-   
 var globalCost =  {
    "lb":{
       "cost":"100",
@@ -57,4 +56,5 @@ function doRender(){
 	}
 
 	alert("Cost Estimate:" + totalCost+ "\nTask Count:"+tasks.length+"\n"+tasks.join("\n"));
+	
 }
