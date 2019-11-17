@@ -2,7 +2,7 @@
 # OPEN CHART: AZ Command Generator
 
 This is an Open Source tool quick and easy for cost estimation of DevOps Infrastructure on Azure
-It allows it's use to easilly and conveniently create a topology diagram of the desired network
+It allows it's user to easilly and conveniently create a topology diagram of the desired network
 and generates a cost estimate and a list of tasks for the devops teams (it generate AZ Commands).
 
 This tool can be later extended to estimate costs for other problems such as User Interface cost
