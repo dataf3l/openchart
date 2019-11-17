@@ -1,4 +1,7 @@
 function propertyChanged(nodeId,propertyName,newValue){
+	if(propertyName == "x"||propertyName == "y"||propertyName == "width"||propertyName == "height"){
+		newValue = parseInt(newValue,10);
+	}
 	globalNetwork.nodes[nodeId][propertyName] = newValue;
 	redrawAll();
 }
