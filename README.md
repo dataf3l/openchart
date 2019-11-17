@@ -26,7 +26,7 @@ http://openchart.azurewebsites.net/ui/shape.html
 
 https://www.youtube.com/watch?v=D0VmsjMyFnU&feature=youtu.be
 
-[](https://i.imgur.com/aApuhHS.png)
+![alt Screenshot](https://i.imgur.com/aApuhHS.png)
 See demo video of usage here:
 
 ### to draw components:
