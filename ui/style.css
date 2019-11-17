@@ -108,3 +108,11 @@ body {
 
 
 }
+#peTitle {
+	font-family: helvetica;
+	padding: 10px;
+	background-color: #e0e0ee;
+	border: 1px solid black;
+	text-align: center;
+	cursor: move;
+}

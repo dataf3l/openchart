@@ -12,8 +12,9 @@ function init(){
 
 	showButtonPalette();
 	redrawAll();
-	var liveNodes = document.getElementById("propertyEditor");
-	Drag.init(liveNodes, liveNodes);
+	var peContainer = document.getElementById("propertyEditor");
+	var handle = document.getElementById("peTitle");
+	Drag.init(handle, peContainer);
 	
 
         var canvas = document.getElementById('preview');
