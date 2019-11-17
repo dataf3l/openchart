@@ -51,6 +51,8 @@ body {
 	font-size:16pt;
 	padding:5px;
 	box-sizing:border-box;
+	text-overflow: ellipsis;
+	overflow: hidden;
 
 }
 .node-lb {
@@ -108,7 +110,29 @@ body {
 
 
 }
+.previewBox {
+	width:200px;
+	height:300px;
+	padding:10px;
+	border: 1px solid black;
+	background-color:rgb(230,230,230);
+	border: 1px solid black;
+
+}
+#prContent {
+	padding:10px;
+	background-color:white;
+	font-family:"courier new", monospace;
+}
 #peTitle {
+	font-family: helvetica;
+	padding: 10px;
+	background-color: #e0e0ee;
+	border: 1px solid black;
+	text-align: center;
+	cursor: move;
+}
+#prTitle {
 	font-family: helvetica;
 	padding: 10px;
 	background-color: #e0e0ee;

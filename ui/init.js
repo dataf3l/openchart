@@ -16,6 +16,10 @@ function init(){
 	var handle = document.getElementById("peTitle");
 	Drag.init(handle, peContainer);
 	
+	var prContainer = document.getElementById("previewBox");
+	var prHandle = document.getElementById("prTitle");
+	Drag.init(prHandle, prContainer);
+
 
         var canvas = document.getElementById('preview');
         var ctx = canvas.getContext("2d");

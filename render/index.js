@@ -57,11 +57,20 @@ function doRender(){
 		totalCost = totalCost + parseInt(globalCost[type].cost,10);
 		for(var t=0;t<globalCost[type].tasks.length;t++){
 			var task = globalCost[type].tasks[t];
-			tasks.push("\n"+task.name.replace(new RegExp("#name","gi"),node.name));
+			
+			var line = task.name.replace(new RegExp("#name","gi"));
+			var parts = line.split("\n");
+			for(var p in parts){
+				if(parts[p][0] == "/"){
+					parts[p] = "<b>" + parts[0] + "</b>";
+				}
+			}
+			line = parts.join("\n");
+			tasks.push("\n"+line,node.name);
 		}
 
 	}
 
-	alert("Cost Estimate:" + totalCost+ "\nTask Count:"+tasks.length+"\n"+tasks.join("\n"));
+	document.getElementById("prContent").innerHTML = ("Cost Estimate:" + totalCost+ "\nTask Count:"+tasks.length+"\n"+tasks.join("\n")).replace(/\n/gi,"<br/>");
 	
 }
